@@ -1,0 +1,13 @@
+jupyter
+tornado
+pandas
+numpy
+matplotlib
+pubchempy
+rdkit
+transformers==4.41.2
+d2l
+scikit-learn
+seaborn
+openpyxl
+ydata_profiling==4.6.5
