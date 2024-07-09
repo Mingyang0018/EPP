@@ -71,6 +71,16 @@ Run the notebook files in the "notebooks_and_code" folder in order, or run any i
 - 03_model_evaluation.ipynb: Evaluate the model on testing set
 - 04_model_prediction.ipynb: Use the trained model to make predictions on new data
 
+### Quick Prediction
+
+To predict enzyme catalytic products using EPP(EPP_151k), execute the command:
+
+```shell
+python3 notebooks_and_code/code/model_prediction.py --path=<path_of_inputfile>
+```
+
+Here, `<path_of_inputfile>` is the path of input file which contains enzyme sequences and substrates. The file template is `data/data_input_template.xlsx`.
+
 ## Citation
 
 If you find our work helpful, please consider citing the following paper:

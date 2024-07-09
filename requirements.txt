@@ -11,3 +11,4 @@ scikit-learn
 seaborn
 openpyxl
 ydata_profiling==4.6.5
+fire

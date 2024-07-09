@@ -71,6 +71,16 @@ jupyter notebook
 - 03_model_evaluation.ipynb: 在测试数据上评估模型
 - 04_model_prediction.ipynb: 使用训练的模型在新数据上进行预测
 
+### 快速预测
+
+如果想要使用EPP(EPP_151k)预测酶催化产物，执行命令：
+
+```shell
+python3 notebooks_and_code/code/model_prediction.py --path=<path_of_inputfile>
+```
+
+其中<path_of_inputfile>为输入数据文件，包含酶序列和底物信息，文件模板为data/data_input_template.xlsx。
+
 ## 引用
 
 如果你觉得我们的工作有帮助，请考虑引用下列论文。
