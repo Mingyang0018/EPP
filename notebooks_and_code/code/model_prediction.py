@@ -183,7 +183,7 @@ def model_predict(
     path_savemodel = f"{MODEL_FOLDER}/{model_name}"
     print(path_savemodel)
     model = net.to(device)
-    state_dict = torch.load(path_savemodel)['state_dict']
+    state_dict = torch.load(path_savemodel, map_location=device)['state_dict']
     new_state_dict = {}
     for k, v in state_dict.items():
         new_state_dict[k.replace("module.", "")] = v
