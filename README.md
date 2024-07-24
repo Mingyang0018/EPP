@@ -1,8 +1,8 @@
-# 介绍
+# EPP介绍
 
 这个存储库包含了论文“A general deep learning model for predicting small molecule products of enzymatic reactions“的代码和数据集。
 
-EPP模型可以根据酶序列和底物，直接预测酶催化产物，如下所示：
+EPP是一个深度学习模型，可以根据酶序列和底物，直接预测酶催化产物，如下所示：
 
 ![img](figures/fig00.png)
 
@@ -10,11 +10,11 @@ EPP模型的架构如下所示：
 
 ![img](figures/fig01.png)
 
-EPP模型在独立测试数据上的预测效果如下：
+我们开发了两种EPP模型:EPP_39k(在39k数据上训练), EPP_151k(在151k数据上训练)。EPP_39k在独立测试数据上的预测效果如下：
 
 ![img](figures/fig03.png)
 
-EPP模型在额外数据上的预测效果如下：
+EPP_39k在额外数据上的预测效果如下：
 
 ![img](figures/fig04.png)
 
@@ -30,9 +30,16 @@ EPP模型在额外数据上的预测效果如下：
     ├── README_EN.md
     └── README.md
 
-所有代码都包含在"notebooks_and_code"文件夹中。所有生成的文件都在"data", "figures", and "model"文件夹中，分别包含了数据集，图片和训练的模型。所有代码都在UBUNTU系统中运行。
+所有代码都包含在"notebooks_and_code"文件夹中。所有生成的文件都在"data", "figures", and "model"文件夹中，分别包含了数据集，图片和训练的模型。
 
 # 使用方式
+
+## 环境要求
+
+|          | 模型训练      | 模型预测      | 本文                                            |
+| -------- | ------------- | ------------- | ----------------------------------------------- |
+| 操作系统 | Linux/Windows | Linux/Windows | Linux                                           |
+| 硬件     | GPU           | GPU/CPU       | GPU: 4*RTX4090<br />CPU: Xeon(R) Gold 6133 CPU |
 
 ## 环境安装
 
@@ -52,7 +59,7 @@ conda activate EPP
 
 然后安装python3, 推荐python 3.10。
 
-安装torch和cuda, 模型训练使用了4个RTX4090, 推荐torch 2.3.1 + cuda 12.1:
+安装torch和cuda, 模型训练使用了4个RTX4090, 推荐torch 2.3.1 + cuda 12.1，对于Linux/Windows，执行命令:
 
 conda安装
 
@@ -92,10 +99,10 @@ jupyter notebook
 如果想要使用EPP(EPP_151k)预测酶催化产物，执行命令：
 
 ```shell
-python3 notebooks_and_code/code/model_prediction.py --path=<path_of_inputfile>
+python notebooks_and_code/code/model_prediction.py --path=<path_of_inputfile>
 ```
 
-其中<path_of_inputfile>为输入数据文件，包含酶序列和底物信息，文件模板为data/data_input_template.xlsx。
+其中<path_of_inputfile>为输入文件，包含酶序列和底物信息，文件模板为data/data_input_template.xlsx。
 
 ## 网络APP
 

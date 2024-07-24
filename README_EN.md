@@ -1,12 +1,12 @@
-# Introduction
+# EPP Introduction
 
 This repository contains the code and dataset for the paper "A general deep learning model for predicting small molecule products of enzymatic reactions".
 
-The EPP model can directly predict the enzyme catalytic products based on enzyme sequences and substrates, as shown below:
+EPP is a deep-learning model, can directly predict the enzyme catalytic products based on enzyme sequences and substrates, as shown below:
 
 ![img](figures/fig00.png)
 
-The architecture of the EPP model is as follows:
+The architecture of EPP model is as follows:
 
 ![img](figures/fig01.png)
 
@@ -33,6 +33,13 @@ This repository contains the following folders:
 All code is included in the "notebooks_and_code" folder. All generated files are stored in the "data", "figures", and "model" folders, which contain the dataset, images, and trained models, respectively. All code is run on UBUNTU system.
 
 # Usage
+
+## Environment Requirements
+
+|                 | Model training | Model prediction | Our paper                                       |
+| --------------- | -------------- | ---------------- | ----------------------------------------------- |
+| Operatin system | Linux/Windows  | Linux/Windows    | Linux                                           |
+| Hardware        | GPU            | GPU/CPU          | GPU: 4*RTX4090<br />CPU: Xeon(R) Gold 6133 CPU |
 
 ## Environment Installation
 
