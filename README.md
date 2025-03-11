@@ -2,7 +2,7 @@
 
 这个存储库包含了论文“A general deep learning model for predicting small molecule products of enzymatic reactions“的代码和数据集。
 
-EPP是一个深度学习模型，可以根据酶序列和底物，直接预测酶催化产物，如下所示：
+EPP是一个深度学习模型，可以根据酶序列和底物，直接预测多个酶催化产物，在独立测试数据上的预测准确率超过92%，如下所示：
 
 ![img](figures/fig00.png)
 
